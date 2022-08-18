@@ -1,2 +1,26 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<h1>Financial data graphing</h1>
+
+<div class='filters-values'>
+  <div class='filters'>
+    <h2>Filters</h2>
+    <label for='from'>From:</label>
+    <input type='date' name='from' id='from-date-input' value='2020-08-01' />
+
+    <label for='to'>To:</label>
+    <input type='date' name='to' id='to-date-input' value='2020-08-31' />
+
+    <label for='to'>Currency:</label>
+    <select name='currency' id='currency'>
+      <option value='USD'>US Dollar ($)</option>
+      <option value='EUR'>EU Euro (€)</option>
+      <option value='GBP'>Pound Sterling (£)</option>
+    </select>
+  </div>
+  <div class='values'>
+    <h2>Values</h2>
+    <p>Max: <span id='max-value'></span></p>
+    <p>Min: <span id='min-value'></span></p>
+  </div>
+</div>
+
+<canvas id='my-chart'></canvas>
